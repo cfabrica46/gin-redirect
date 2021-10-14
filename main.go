@@ -4,7 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func setRedirectHTTPtoHTTPS() {
+func runRedirectHTTPtoHTTPS() {
 	httpRouter := gin.Default()
 	httpRouter.GET("/*path", func(c *gin.Context) {
 		c.Redirect(302, "https://localhost:8081"+c.Request.RequestURI)
@@ -14,7 +14,7 @@ func setRedirectHTTPtoHTTPS() {
 
 func main() {
 
-	setRedirectHTTPtoHTTPS()
+	runRedirectHTTPtoHTTPS()
 
 	httpsRouter := gin.Default()
 
