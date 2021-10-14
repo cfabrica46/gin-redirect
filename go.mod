@@ -1,4 +1,4 @@
-module github.com/cfabrica46/http2/gin-redirect
+module github.com/cfabrica46/gin-redirect
 
 go 1.16
 
